@@ -19,6 +19,6 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: SuperMini NRF52840
     shield: GLITCHED38
 
