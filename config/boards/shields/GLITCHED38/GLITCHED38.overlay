@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "Glitched38-layouts.dtsi"
-
+#include "GLITCHED38.dtsi"
 
 / {
     chosen{
