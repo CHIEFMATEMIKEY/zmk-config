@@ -1,2 +1,2 @@
-config SHIELD_GLITCHED38
+config SHIELD_Glitched38
     def_bool $(shields_list_contains, Glitched38)
