@@ -1,5 +1,6 @@
-if SHIELD_GLITCHED38
+if Glitched38
 
+// name can't be longer than 16 characters
 config ZMK_KEYBOARD_NAME
     default "Glitched38"
 
