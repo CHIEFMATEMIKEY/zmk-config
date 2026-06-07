@@ -20,5 +20,5 @@
 ---
 include:
   - board: nrf52840dk_nrf52840
-    shield: GLITCHED38
+    shield: SHIELD_GLITCHED38
 
