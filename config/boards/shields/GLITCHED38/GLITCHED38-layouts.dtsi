@@ -1,36 +1,48 @@
-dts/ {
-    chosen {
-        zmk,physical-layout = &physical_layout_chording;
-    };
+#include <physical_layouts.dtsi>
 
-    physical_layout_chording: physical_layout_chording {
+/ {
+    physical_layout_glitched_38: physical_layout_glitched_38 {
         compatible = "zmk,physical-layout";
-        display-name = "Glitch38 Layout";
-        transform = <&default_transform>; // References your matrix transform
-
-        // Physical coordinates in micrometers (µm). 1U = 19050 µm
-        kbecs = <
-            /* Left Hand Alphas */
-            /* Row 0 */
-            <RC(0,0) 0 0> <RC(0,1) 19050 0> <RC(0,2) 38100 0> <RC(0,3) 57150 0> <RC(0,4) 76200 0>
-            /* Row 1 */
-            <RC(1,0) 0 19050> <RC(1,1) 19050 19050> <RC(1,2) 38100 19050> <RC(1,3) 57150 19050> <RC(1,4) 76200 19050>
-            /* Row 2 */
-            <RC(2,0) 0 38100> <RC(2,1) 19050 38100> <RC(2,2) 38100 38100> <RC(2,3) 57150 38100> <RC(2,4) 76200 38100>
-
-            /* Right Hand Alphas (Separated by a 2U physical center gap = 38100 µm) */
-            /* Row 0 */
-            <RC(0,5) 133350 0> <RC(0,6) 152400 0> <RC(0,7) 171450 0> <RC(0,8) 190500 0> <RC(0,9) 209550 0>
-            /* Row 1 */
-            <RC(1,5) 133350 19050> <RC(1,6) 152400 19050> <RC(1,7) 171450 19050> <RC(1,8) 190500 19050> <RC(1,9) 209550 19050>
-            /* Row 2 */
-            <RC(2,5) 133350 38100> <RC(2,6) 152400 38100> <RC(2,7) 171450 38100> <RC(2,8) 190500 38100> <RC(2,9) 209550 38100>
-
-            /* Left Thumb Cluster - sequentially tucked under the inner alpha keys (columns 1 to 4) */
-            <RC(3,0) 19050 57150> <RC(3,1) 38100 57150> <RC(3,2) 57150 57150> <RC(3,3) 76200 57150>
-
-            /* Right Thumb Cluster - sequentially tucked under the inner alpha keys (columns 5 to 8) */
-            <RC(3,4) 133350 57150> <RC(3,5) 152400 57150> <RC(3,6) 171450 57150> <RC(3,7) 190500 57150>
-        >;
+        display-name = "Glitched 38";
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0   95       0     0    95>
+            , <&key_physical_attrs 100 100  100   32       0   100    32>
+            , <&key_physical_attrs 100 100  200    0       0   200     0>
+            , <&key_physical_attrs 100 100  300   28       0   300    28>
+            , <&key_physical_attrs 100 100  400   42       0   400    42>
+            , <&key_physical_attrs 100 100  825   42       0   825    42>
+            , <&key_physical_attrs 100 100  925   28       0   925    28>
+            , <&key_physical_attrs 100 100 1025    0       0  1025     0>
+            , <&key_physical_attrs 100 100 1125   32       0  1125    32>
+            , <&key_physical_attrs 100 100 1225   95       0  1225    95>
+            , <&key_physical_attrs 100 100    0  195       0     0   195>
+            , <&key_physical_attrs 100 100  100  132       0   100   132>
+            , <&key_physical_attrs 100 100  200  100       0   200   100>
+            , <&key_physical_attrs 100 100  300  129       0   300   129>
+            , <&key_physical_attrs 100 100  400  142       0   400   142>
+            , <&key_physical_attrs 100 100  825  142       0   825   142>
+            , <&key_physical_attrs 100 100  925  129       0   925   129>
+            , <&key_physical_attrs 100 100 1025  100       0  1025   100>
+            , <&key_physical_attrs 100 100 1125  132       0  1125   132>
+            , <&key_physical_attrs 100 100 1225  195       0  1225   195>
+            , <&key_physical_attrs 100 100    0  295       0     0   295>
+            , <&key_physical_attrs 100 100  100  231       0   100   231>
+            , <&key_physical_attrs 100 100  200  200       0   200   200>
+            , <&key_physical_attrs 100 100  300  229       0   300   229>
+            , <&key_physical_attrs 100 100  400  242       0   400   242>
+            , <&key_physical_attrs 100 100  825  242       0   825   242>
+            , <&key_physical_attrs 100 100  925  229       0   925   229>
+            , <&key_physical_attrs 100 100 1025  200       0  1025   200>
+            , <&key_physical_attrs 100 100 1125  231       0  1125   231>
+            , <&key_physical_attrs 100 100 1225  295       0  1225   295>
+            , <&key_physical_attrs 100 100  205  350       0   305   455>
+            , <&key_physical_attrs 100 100  305  350       0   305   455>
+            , <&key_physical_attrs 100 100  725  350       0   845   455>
+            , <&key_physical_attrs 100 100  825  350       0   845   455>
+            , <&key_physical_attrs 100 100  925  350       0   925   350>
+            , <&key_physical_attrs 100 100 1025  350       0  1025   350>
+            , <&key_physical_attrs 100 100  400  350       0   400   350>
+            , <&key_physical_attrs 100 100  500  350       0   500   350>
+            ;
     };
 };
