@@ -1,0 +1,2 @@
+config GLITCHED38
+    def_bool $(shields_list_contains,GLITCHED38)
