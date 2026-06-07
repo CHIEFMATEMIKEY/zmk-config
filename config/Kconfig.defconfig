@@ -1,0 +1,6 @@
+if SHIELD_GLITCHED38
+
+config ZMK_KEYBOARD_NAME
+    default "Glitched38"
+
+endif    
