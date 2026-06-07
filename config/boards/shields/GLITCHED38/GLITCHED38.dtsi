@@ -1,4 +1,4 @@
-#include "glitched_38-layouts.dtsi"
+#include "glitched38-layout.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
