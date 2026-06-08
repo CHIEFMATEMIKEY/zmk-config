@@ -177,9 +177,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp O>, <&macro_release &kp LEFT_SHIFT>,
-            <&macro_tap &kp S>, <&macro_tap &kp T>, <&macro_tap &kp E>, <&macro_tap &kp R>, <&macro_tap &kp L>, <&macro_tap &kp M>, <&macro_tap &kp I>, <&macro_tap &kp AT>, <&macro_tap &kp A>, <&macro_tap &kp M>, <&macro_tap &kp A>, <&macro_tap &kp Z>, <&macro_tap &kp O>, <&macro_tap &kp N>, <&macro_tap &kp DOT>, <&macro_tap &kp C>, <&macro_tap &kp O>, <&macro_tap &kp M>,
-//            <&macro_tap &kp ENTER>
-            ;
+            <&macro_tap &kp S>, <&macro_tap &kp T>, <&macro_tap &kp E>, <&macro_tap &kp R>, <&macro_tap &kp L>, <&macro_tap &kp M>, <&macro_tap &kp I>, <&macro_tap &kp AT>, <&macro_tap &kp A>, <&macro_tap &kp M>, <&macro_tap &kp A>, <&macro_tap &kp Z>, <&macro_tap &kp O>, <&macro_tap &kp N>, <&macro_tap &kp DOT>, <&macro_tap &kp C>, <&macro_tap &kp O>, <&macro_tap &kp M>;
         };
         scrnsht: screenshot {
             compatible = "zmk,behavior-macro";
