@@ -9,7 +9,7 @@
 #define L_SYMBOL 1
 #define L_DELETE 2
 #define L_NAV 3
-#define L_MACRO 5
+#define L_MACRO 4
 
 / {
     /*
@@ -199,7 +199,7 @@
         combo_macro {
             timeout-ms = <250>; 
             key-positions = <33 34>; 
-            bindings = <&tog LAYER_MACRO>; 
+            bindings = <&tog 3>; // Toggles the Macro layer on combo press 
         };
         
         // COMBO_QUESTION uses KC_SHCAPS (Position 36) + KC_ENT (Position 37)
