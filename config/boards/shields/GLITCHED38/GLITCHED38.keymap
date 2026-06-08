@@ -115,7 +115,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>; 
-            bindings = <&kp X>, <&kp LEFT_GUI>;
+            bindings = <&kp X &kp LEFT_GUI>;
         };
         zshift: z_and_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -251,7 +251,7 @@
 
         macro_layer {
             bindings = <
-    &nexttab       &prevtab     &none        &none        &none                      &pswd1       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
+    &nexttab       &prevtab     &none        &screenshot  &none                      &pswd1       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
     &none          &none        &mwahaha     &angry       &smile                     &email       &none        &none        &none        &none
     &none          &none        &none        &none        &none                      &none        &none        &none        &none        &bootloader
                    &none        &none        &none        &none                      &none        &none        &none        &none
