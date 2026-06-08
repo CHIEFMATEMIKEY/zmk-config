@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LCBR>, <&kp RCBR>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
         };
         td_parn: tapdance_parentheses {
             compatible = "zmk,behavior-tap-dance";
