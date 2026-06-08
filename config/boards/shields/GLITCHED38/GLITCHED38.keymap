@@ -154,7 +154,7 @@
         smile: smile {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp COLON &kp RPAR>;
+            bindings = <&macro_tap &kp COLON>, <&macro_tap &kp RPAR>;
         };
         angry: angry {
             compatible = "zmk,behavior-macro";
