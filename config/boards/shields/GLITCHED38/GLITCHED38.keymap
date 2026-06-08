@@ -84,25 +84,25 @@
             tapping-term-ms = <200>;
             bindings = <&kp COLON>, <&kp SCLN>;
         };
-        ctrlleft: control left {
+        ctrlleft: control_left {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LEFT>, <&kp LC(LEFT)>;
         };
-        ctrlright: control right {
+        ctrlright: control_right {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RIGHT>, <&kp LC(RIGHT)>;
         };
-        ctrlup: control up {
+        ctrlup: control_up {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp UP>, <&kp LC(UP)>;
         };
-        ctrldown: control down {
+        ctrldown: control_down {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -113,6 +113,20 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp MINUS>, <&kp TILDE>;
+        };
+        ht: hold_tap_tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>; 
+            bindings = <&kp >, <&kp>;
+        };
+        hh: hold_tap_hold_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>; 
+            bindings = <&kp >, <&kp>;
         };
 
 
@@ -193,8 +207,8 @@
             bindings = <
     &qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp SQT
     &kp A          &kp R        &kp S        &kp T        &kp G                      &kp M        &kp N        &kp E        &kp I        &kp O
-    &ht Z LSHIFT   &ht X LGUI   &ht C LALT   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
-                   &kp LALT     &kp LCTRL    &ht BSPC MO(L_DELETE) &mo L_NAV         &mo L_SYMBOL &kp SPC      &shcaps      &kp ENTER
+    &hh Z LSHIFT   &hh X LGUI   &ht C LALT   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
+                   &kp LALT     &kp LCTRL    &hh BSPC MO(L_DELETE) &mo L_NAV         &mo L_SYMBOL &kp SPC      &shcaps      &kp ENTER
             >;
         };
 
