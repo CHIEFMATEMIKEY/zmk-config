@@ -169,12 +169,17 @@
         pswd1: password1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_types STRING_HOLD("Mikeysch00!")>, <&macro_tap &kp ENTER>;
+            bindings = <&macro_press &kp left_shift>, <&macro_tap &kp M>, <&macro_release &kp left_shift>,
+            <&macro_tap &kp I>, <&macro_tap &kp K>, <&macro_tap &kp E>, <&macro_tap &kp Y>, <&macro_tap &kp S>, <&macro_tap &kp C>, <&macro_tap &kp H>, <&macro_tap &kp 0>, <&macro_tap &kp 0>, <&macro_tap &kp EXCL>,
+            <&macro_tap &kp ENTER>;
         };
         email: email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_types STRING_HOLD("Osterlmi@amazon.com")>;
+            bindings = <&macro_press &kp left_shift>, <&macro_tap &kp O>, <&macro_release &kp left_shift>,
+            <&macro_tap &kp S>, <&macro_tap &kp T>, <&macro_tap &kp E>, <&macro_tap &kp R>, <&macro_tap &kp L>, <&macro_tap &kp M>, <&macro_tap &kp I>, <&macro_tap &kp AT>, <&macro_tap &kp A>, <&macro_tap &kp M>, <&macro_tap &kp A>, <&macro_tap &kp Z>, <&macro_tap &kp O>, <&macro_tap &kp N>, <&macro_tap &kp DOT>, <&macro_tap &kp C>, <&macro_tap &kp O>, <&macro_tap &kp M>,
+//            <&macro_tap &kp ENTER>
+            ;
         };
         scrnsht: screenshot {
             compatible = "zmk,behavior-macro";
