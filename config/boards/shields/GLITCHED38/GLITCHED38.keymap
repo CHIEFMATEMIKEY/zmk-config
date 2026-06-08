@@ -109,36 +109,6 @@
             bindings = <&kp MINUS>, <&kp TILDE>;
         };
 
-        // Custom Mod-Taps matching your C definitions
-        guix: x_and_gui {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>; 
-            bindings = <&kp X>, <&kp LEFT_GUI>;
-        };
-        zshift: z_and_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>; 
-            bindings = <&kp LEFT_SHIFT>, <&kp Z>;
-        };
-        altc: c_and_alt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>; 
-            bindings = <&kp LEFT_ALT>, <&kp C>;
-        };
-        onum: backspace_and_delete_layer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo L_DELETE>, <&kp BSPC>;
-        };
-    };
 
     macros {
         nexttab: nexttab {
@@ -217,8 +187,8 @@
             bindings = <
     &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp SQT
     &kp A          &kp R        &kp S        &kp T        &kp G                      &kp M        &kp N        &kp E        &kp I        &kp O
-    &zshift        &guix       &altc LALT C  &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
-                   &kp LALT     &kp LCTRL    &onum        &mo L_NAV                  &mo L_SYMBOL &kp SPC      &td_shcaps   &kp ENTER
+    &ht Z LSHIFT   &ht X LGUI   &ht C LALT   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
+                   &kp LALT     &kp LCTRL    &ht BSPC MO(L_DELETE) &mo L_NAV         &mo L_SYMBOL &kp SPC      &td_shcaps   &kp ENTER
             >;
         };
 
