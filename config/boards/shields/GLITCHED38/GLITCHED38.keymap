@@ -115,14 +115,14 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>; 
-            bindings = <&kp x>, <&kp LEFT_GUI>;
+            bindings = <&kp X>, <&kp LEFT_GUI>;
         };
         zshift: z_and_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>; 
-            bindings = <&kp LEFT_SHIFT>, <&kp z>;
+            bindings = <&kp LEFT_SHIFT>, <&kp Z>;
         };
         altc: c_and_alt {
             compatible = "zmk,behavior-hold-tap";
