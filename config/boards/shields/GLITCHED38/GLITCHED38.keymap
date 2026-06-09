@@ -80,7 +80,6 @@
         };
         td_colonsemi: tapdance_colon_and_semicolon {
             compatible = "zmk,behavior-tap-dance";
-            #binding-tap-dance = <0>;
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COLON>, <&kp SCLN>;
@@ -171,7 +170,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp M>, <&macro_release &kp LEFT_SHIFT>,
-            <&macro_tap &kp I>, <&macro_tap &kp K>, <&macro_tap &kp E>, <&macro_tap &kp Y>, <&macro_tap &kp S>, <&macro_tap &kp C>, <&macro_tap &kp H>, <&macro_tap &kp 0>, <&macro_tap &kp 0>, <&macro_tap &kp EXCL>,
+            <&macro_tap &kp I>, <&macro_tap &kp K>, <&macro_tap &kp E>, <&macro_tap &kp Y>, <&macro_tap &kp S>, <&macro_tap &kp C>, <&macro_tap &kp H>, <&macro_tap &kp N0>, <&macro_tap &kp N0>, <&macro_tap &kp EXCL>,
             <&macro_tap &kp ENTER>;
         };
         email: email {
@@ -218,8 +217,8 @@
             bindings = <
     &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp SQT
     &kp A          &kp R        &kp S        &kp T        &kp G                      &kp M        &kp N        &kp E        &kp I        &kp O
-    &hh LSHIFT Z   &hh X LGUI   &ht C LALT   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
-                   &kp LALT     &kp LCTRL    &hl BSPC MO(L_DELETE) &mo L_NAV         &mo L_SYMBOL &kp SPC      &td_shcaps   &kp ENTER
+    &hh LSHIFT Z   &hh LGUI X   &ht LALT C   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
+                   &kp LALT     &kp LCTRL    &hl L_DELETE BSPC &mo L_NAV         &mo L_SYMBOL &kp SPC      &td_shcaps   &kp ENTER
             >;
         };
 
@@ -236,7 +235,7 @@
             bindings = <
     &kp ESC        &none        &none        &none        &kp DEL                    &kp N7       &kp N8       &kp N9    &kp KP_MULTIPLY &kp KP_DIVIDE
     &none          &kp BSPC     &kp LC(BSPC) &kp LC(BSPC) &kp BSPC                   &kp N4       &kp N5       &kp N6       &kp KP_PLUS  &kp KP_MINUS
-    &none          &none        &none        &none        &none                      &kp N1       &kp N2       &kp N3       &kp DOT      &none
+    &none          &none        &none        &none        &none                      &kp N1       &kp N2       &kp N3       &kp KP_DOT      &none
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
         };
