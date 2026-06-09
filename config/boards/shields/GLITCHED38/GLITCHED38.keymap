@@ -24,7 +24,7 @@
 
     behaviors {
         // Double-tap definitions
-        qtab: tapdance_tab_and_q {
+        td_qtab: tapdance_tab_and_q {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -36,79 +36,79 @@
             tapping-term-ms = <200>;
             bindings = <&kp LBRC>, <&kp RBRC>;
         };
-        cbkt: tapdance_curly_brackets {
+        td_cbkt: tapdance_curly_brackets {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LBRC>, <&kp RBRC>;
         };
-        ltgt: tapdance_less_greater {
+        td_ltgt: tapdance_less_greater {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
         };
-        parn: tapdance_parentheses {
+        td_parn: tapdance_parentheses {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
-        ltgt: tapdance_angles {
+        td_angles: tapdance_angles {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
         };
-        shcaps: tapdance_shift_and_caps {
+        td_shcaps: tapdance_shift_and_caps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&kp CAPS>;
         };
-        slashs: tapdance_slash_and_backslash {
+        td_slashs: tapdance_slash_and_backslash {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp FSLH>, <&kp BSLH>;
         };
-        cttab: ctrl_tab {
+        td_cttab: ctrl_tab {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
         };
-        colonsemi: tapdance_colon_and_semicolon {
+        td_colonsemi: tapdance_colon_and_semicolon {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COLON>, <&kp SCLN>;
         };
-        ctrlleft: control_left {
+        td_ctrlleft: control_left {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LEFT>, <&kp LC(LEFT)>;
         };
-        ctrlright: control_right {
+        td_ctrlright: control_right {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RIGHT>, <&kp LC(RIGHT)>;
         };
-        ctrlup: control_up {
+        td_ctrlup: control_up {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp UP>, <&kp LC(UP)>;
         };
-        ctrldown: control_down {
+        td_ctrldown: control_down {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp DOWN>, <&kp LC(DOWN)>;
         };
-        dshtld: tapdance_dash_and_tilde {
+        td_dshtld: tapdance_dash_and_tilde {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -205,18 +205,18 @@
 
         alpha_layer {
             bindings = <
-    &qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp SQT
+    &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp SQT
     &kp A          &kp R        &kp S        &kp T        &kp G                      &kp M        &kp N        &kp E        &kp I        &kp O
     &hh Z LSHIFT   &hh X LGUI   &ht C LALT   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
-                   &kp LALT     &kp LCTRL    &hh BSPC MO(L_DELETE) &mo L_NAV         &mo L_SYMBOL &kp SPC      &shcaps      &kp ENTER
+                   &kp LALT     &kp LCTRL    &hh BSPC MO(L_DELETE) &mo L_NAV         &mo L_SYMBOL &kp SPC      &td_shcaps   &kp ENTER
             >;
         };
 
         symbol_layer {
             bindings = <
     &kp N1         &kp N2       &kp N3       &kp N4       &kp N5                     &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
-    &kp EXCL       &kp AT       &kp HASH     &slashs   &kp PRCNT                     &colonsemi   &kp EQUAL    &kp ASTRK    &parn        &kp PIPE
-    &kp DLLR       &ltgt        &kp GRAVE    &cbkt        &kp AMPS                   &kp UNDER    &kp PLUS     &dshtld      &sbkt        &kp ENTER
+    &kp EXCL       &kp AT       &kp HASH     &td_slashs   &kp PRCNT                  &td_colonsemi &kp EQUAL    &kp ASTRK    &td_parn        &kp PIPE
+    &kp DLLR       &td_ltgt     &kp GRAVE    &td_cbkt     &kp AMPS                   &kp UNDER    &kp PLUS     &td_dshtld      &td_sbkt        &kp ENTER
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
         };
@@ -232,9 +232,9 @@
 
         navigation_layer {
             bindings = <
-    &kp ESC        &none        &kp UP       &none        &cttab                     &kp PG_UP    &kp HOME     &ctrlup      &kp END        &kp C_VOL_UP
-    &kp LEFT_SHIFT &kp LEFT     &kp DOWN     &kp RIGHT    &kp F5                     &kp PG_DN    &ctrlleft    &ctrldown    &ctrlright     &kp C_VOL_DN
-    &kp ENTER      &kp J        &kp K        &kp L        &kp SPACE                  &none        &kp K_PREV   &kp C_PLAY_PAUSE &kp K_NEXT &kp ENTER
+    &kp ESC        &none        &kp UP       &none        &td_cttab                  &kp PG_UP    &kp HOME     &td_ctrlup      &kp END        &kp C_VOL_UP
+    &kp LEFT_SHIFT &kp LEFT     &kp DOWN     &kp RIGHT    &kp F5                     &kp PG_DN    &td_ctrlleft &td_ctrldown    &td_ctrlright  &kp C_VOL_DN
+    &kp ENTER      &kp J        &kp K        &kp L        &kp SPACE                  &none        &kp K_PREV   &kp C_PLAY_PAUSE &kp K_NEXT    &kp ENTER
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
         };
