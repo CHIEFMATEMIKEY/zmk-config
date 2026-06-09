@@ -208,7 +208,7 @@
     &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp SQT
     &kp A          &kp R        &kp S        &kp T        &kp G                      &kp M        &kp N        &kp E        &kp I        &kp O
     &hh Z LSHIFT   &hh X LGUI   &ht C LALT   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
-                   &kp LALT     &kp LCTRL    &hh BSPC MO(L_DELETE) &mo L_NAV         &mo L_SYMBOL &kp SPC      &td_shcaps   &kp ENTER
+                   &kp LALT     &kp LCTRL    &hh BSPC MO(L_DELETE) &mo L_NAV         &mo L_SYMBOL &kp SPC      &none   &kp ENTER
             >;
         };
 
