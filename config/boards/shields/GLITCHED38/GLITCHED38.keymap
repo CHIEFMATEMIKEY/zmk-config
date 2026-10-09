@@ -192,15 +192,23 @@
 //        };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        macro_layer {
+            if-layers = <3 1>;
+            then-layer = <4>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         
         // COMBO_MACRO uses KC_OSYM (Position 34) + KC_ONAV (Position 33)
-        combo_macro {
-            timeout-ms = <250>; 
-            key-positions = <33 34>; 
-            bindings = <&tog 3>; // Toggles the Macro layer on combo press 
-        };
+       // combo_macro {
+       //     timeout-ms = <250>; 
+       //     key-positions = <33 34>; 
+       //     bindings = <&tog 3>; // Toggles the Macro layer on combo press 
+       // };
         
         // COMBO_QUESTION uses KC_SHCAPS (Position 36) + KC_ENT (Position 37)
         combo_question {
