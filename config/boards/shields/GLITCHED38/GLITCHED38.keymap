@@ -212,16 +212,16 @@
 
     keymap {
         compatible = "zmk,keymap";
-
+//layer 0
         alpha_layer {
             bindings = <
     &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp SQT
     &kp A          &kp R        &kp S        &kp T        &kp G                      &kp M        &kp N        &kp E        &kp I        &kp O
     &hh LSHIFT Z   &hh LGUI X   &ht LALT C   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
-                   &kp LALT     &kp LCTRL    &lt 3 BSPC &mo L_NAV         &mo L_SYMBOL     &kp SPC      &td_shcaps   &kp ENTER
+                   &kp LALT     &kp LCTRL    &lt 2 BSPC   &mo 3                      &mo 1        &kp SPC      &td_shcaps   &kp ENTER
             >;
         };
-
+//layer 1
         symbol_layer {
             bindings = <
     &kp N1         &kp N2       &kp N3       &kp N4       &kp N5                     &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
@@ -230,7 +230,7 @@
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
         };
-
+//layer 2
         delete_layer {
             bindings = <
     &kp ESC        &none        &none        &none        &kp DEL                    &kp N7       &kp N8       &kp N9    &kp KP_MULTIPLY &kp KP_DIVIDE
@@ -239,7 +239,7 @@
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
         };
-
+//layer 3
         navigation_layer {
             bindings = <
     &kp ESC        &none        &kp UP       &none        &td_cttab                  &kp PG_UP    &kp HOME     &td_ctrlup      &kp END        &kp C_VOL_UP
@@ -248,7 +248,7 @@
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
         };
-
+//layer 4
         macro_layer {
             bindings = <
     &nexttab       &prevtab     &none        &screenshot  &none                      &pswd1       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
@@ -259,3 +259,15 @@
         };
     };
 };
+
+
+
+
+
+
+
+    TTTTTT
+
+
+
+

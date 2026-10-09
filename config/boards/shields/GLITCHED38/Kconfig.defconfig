@@ -4,4 +4,7 @@ if GLITCHED38
 config ZMK_KEYBOARD_NAME
     default "Glitched 38"
 
+CONFIG_ZMK_STUDIO_LOCKING
+    default n
+
 endif
