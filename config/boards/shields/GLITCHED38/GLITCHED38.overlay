@@ -28,6 +28,12 @@
     };
 };
 
-&physical_layout_glitched_38 {
-    kscan = <&kscan0>;
+//&physical_layout_glitched_38 {
+//    kscan = <&kscan0>;
+//};
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
 };
