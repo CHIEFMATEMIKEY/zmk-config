@@ -186,13 +186,6 @@
                 = <&macro_press &kp LGUI &kp LEFT_SHIFT>, <&macro_tap &kp S>, <&macro_release &kp LGUI &kp LEFT_SHIFT>;
         };
 
-        zed_em_kay: zed_em_kay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LSHFT>,
-                <&macro_tap &kp Z &kp M &kp K>,
-                <&macro_release &kp LSHFT>;
 //        wfh: wfh {
 //            compatible = "zmk,behavior-macro";
 //            #binding-cells = <0>;
