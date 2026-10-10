@@ -192,27 +192,27 @@
 //        };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        macro_layer {
-            if-layers = <3 1>;
-            then-layer = <4>;
-        };
-    };
+//    conditional_layers {
+//        compatible = "zmk,conditional-layers";
+//        macro_layer {
+//            if-layers = <1 3>;
+//            then-layer = <4>;
+//        };
+//    };
 
     combos {
         compatible = "zmk,combos";
         
-        // COMBO_MACRO uses KC_OSYM (Position 34) + KC_ONAV (Position 33)
-       // combo_macro {
-       //     timeout-ms = <250>; 
-       //     key-positions = <33 34>; 
-       //     bindings = <&tog 3>; // Toggles the Macro layer on combo press 
-       // };
+         COMBO_MACRO uses KC_OSYM (Position 34) + KC_ONAV (Position 33)
+        combo_macro {
+            timeout-ms = <250>; 
+            key-positions = <33 34>; 
+            bindings = <&sl 4>; // Toggles the Macro layer on combo press 
+        };
         
         // COMBO_QUESTION uses KC_SHCAPS (Position 36) + KC_ENT (Position 37)
         combo_question {
-            timeout-ms = <50>; 
+            timeout-ms = <250>; 
             key-positions = <36 37>; 
             bindings = <&kp QMARK>;
         };
@@ -233,16 +233,16 @@
         symbol_layer {
             bindings = <
     &kp N1         &kp N2       &kp N3       &kp N4       &kp N5                     &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
-    &kp EXCL       &kp AT       &kp HASH     &td_slashs   &kp PRCNT                  &td_colonsemi &kp EQUAL    &kp ASTRK    &td_parn        &kp PIPE
-    &kp DLLR       &td_ltgt     &kp GRAVE    &td_cbkt     &kp AMPS                   &kp UNDER    &kp PLUS     &td_dshtld      &td_sbkt        &kp ENTER
+    &kp EXCL       &kp AT       &kp HASH     &td_slashs   &kp PRCNT                 &td_colonsemi &kp EQUAL    &kp ASTRK    &td_parn     &kp PIPE
+    &kp DLLR       &td_ltgt     &kp GRAVE    &td_cbkt     &kp AMPS                   &kp UNDER    &kp PLUS     &td_dshtld   &td_sbkt     &kp ENTER
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
         };
 //layer 2
         delete_layer {
             bindings = <
-    &kp ESC        &none        &none        &none        &kp DEL                    &kp N7       &kp N8       &kp N9    &kp KP_MULTIPLY &kp KP_DIVIDE
-    &none          &kp BSPC     &kp LC(BSPC) &kp LC(BSPC) &kp BSPC                   &kp N4       &kp N5       &kp N6       &kp KP_PLUS  &kp KP_MINUS
+    &kp ESC        &none        &none        &none        &kp DEL                    &kp N7       &kp N8       &kp N9       &kp KP_MULTIPLY &kp KP_DIVIDE
+    &none          &kp BSPC     &kp LC(BSPC) &kp LC(BSPC) &kp BSPC                   &kp N4       &kp N5       &kp N6       &kp KP_PLUS     &kp KP_MINUS
     &none          &none        &none        &none        &none                      &kp N1       &kp N2       &kp N3       &kp KP_DOT      &none
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
@@ -250,8 +250,8 @@
 //layer 3
         navigation_layer {
             bindings = <
-    &kp ESC        &none        &kp UP       &none        &td_cttab                  &kp PG_UP    &kp HOME     &td_ctrlup      &kp END        &kp C_VOL_UP
-    &kp LEFT_SHIFT &kp LEFT     &kp DOWN     &kp RIGHT    &kp F5                     &kp PG_DN    &td_ctrlleft &td_ctrldown    &td_ctrlright  &kp C_VOL_DN
+    &kp ESC        &none        &kp UP       &none        &kp F5                     &kp PG_UP    &kp HOME     &td_ctrlup      &kp END        &kp C_VOL_UP
+    &kp LEFT_SHIFT &kp LEFT     &kp DOWN     &kp RIGHT    &td_cttab                  &kp PG_DN    &td_ctrlleft &td_ctrldown    &td_ctrlright  &kp C_VOL_DN
     &kp ENTER      &kp J        &kp K        &kp L        &kp SPACE                  &none        &kp K_PREV   &kp C_PLAY_PAUSE &kp K_NEXT    &kp ENTER
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
@@ -259,8 +259,8 @@
 //layer 4
         macro_layer {
             bindings = <
-    &nexttab       &prevtab     &none        &screenshot  &none                      &pswd1       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
-    &none          &none        &mwahaha     &angry       &smile                     &email       &none        &none        &none        &studio_unlock
+    &none          &none        &none        &screenshot  &screenshot                &pswd1       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
+    &none          &none        &mwahaha     &smile       &angry                     &email       &none        &none        &none        &studio_unlock
     &none          &none        &none        &none        &none                      &none        &none        &none        &none        &bootloader
                    &none        &none        &none        &none                      &none        &none        &none        &none
             >;
