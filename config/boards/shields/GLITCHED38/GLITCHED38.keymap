@@ -114,6 +114,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp MINUS>, <&kp TILDE>;
         };
+        td_bt3_bt_clr: tapdance_bluetooth_3_and_bluetooth_clear {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&bt BT_SEL 3>, <&bt BT_CLR>;
+        };
+        
         
         // Corrected hold-tap inheritance patterns:
         ht: hold_tap_tap_preferred {
@@ -241,7 +248,7 @@
     &kp N1         &kp N2       &kp N3       &kp N4       &kp N5                     &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
     &kp EXCL       &kp AT       &kp HASH     &td_slashs   &kp PRCNT                 &td_colonsemi &kp EQUAL    &kp ASTRK    &td_parn     &kp PIPE
     &kp DLLR       &td_ltgt     &kp GRAVE    &td_cbkt     &kp AMPS                   &kp UNDER    &kp PLUS     &td_dshtld   &td_sbkt     &kp ENTER
-                   &none        &none        &none        &none                      &none        &none        &none        &none
+                   &none        &none        &kp DELETE   &none                      &none        &none        &none        &none
             >;
         };
 //layer 2
@@ -259,13 +266,13 @@
     &kp ESC        &none        &kp UP       &none        &kp F5                     &kp PG_UP    &kp HOME     &td_ctrlup      &kp END        &kp C_VOL_UP
     &kp LEFT_SHIFT &kp LEFT     &kp DOWN     &kp RIGHT    &td_cttab                  &kp PG_DN    &td_ctrlleft &td_ctrldown    &td_ctrlright  &kp C_VOL_DN
     &kp ENTER      &kp J        &kp K        &kp L        &kp SPACE                  &none        &kp K_PREV   &kp C_PLAY_PAUSE &kp K_NEXT    &kp ENTER
-                   &none        &none        &none        &none                      &none        &none        &none        &none
+                   &none        &none        &kp delete   &none                      &none        &none        &none        &none
             >;
         };
 //layer 4
         macro_layer {
             bindings = <
-    &none          &none        &none        &screenshot  &screenshot                &pswd1       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
+    &none          &none        &none        &screenshot  &screenshot                &pswd1       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &td_bt3_bt_clr
     &none          &none        &mwahaha     &smile       &angry                     &email       &none      &studio_unlock &sys_reset   &bootloader    
     &none          &none        &none        &none        &none                      &none        &none        &none        &none        &none  
                    &none        &none        &none        &none                      &none        &none        &none        &none
