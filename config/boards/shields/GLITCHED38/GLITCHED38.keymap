@@ -123,6 +123,13 @@
             tapping-term-ms = <200>; 
             bindings = <&kp>, <&kp>;
         };
+        htl: hold_tap_tap_preferred_long {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>; 
+            bindings = <&kp>, <&kp>;
+        };
         hh: hold_tap_hold_preferred {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -136,13 +143,6 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>; 
             bindings = <&mo>, <&kp>;
-        };
-        mt_sqt_boot: mod_tap_single_quote_and_bootloader {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <500>;
-            bindings = <&kp SQT>, <&bootloader>;
         };
     };
 
@@ -202,8 +202,6 @@
 
     combos {
         compatible = "zmk,combos";
-        
-//         COMBO_MACRO uses KC_OSYM (Position 34) + KC_ONAV (Position 33)
         combo_macro {
             timeout-ms = <250>; 
             key-positions = <33 34>; 
@@ -231,7 +229,7 @@
 //layer 0
         alpha_layer {
             bindings = <
-    &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &mt_sqt_boot
+    &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &htl &kp SQT &bootloader
     &kp A          &kp R        &kp S        &kp T        &kp G                      &kp M        &kp N        &kp E        &kp I        &kp O
     &hh LSHIFT Z   &hh LGUI X   &ht LALT C   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
                    &kp LALT     &kp LCTRL    &lt 2 BSPC   &mo 3                      &mo 1        &kp SPC      &td_shcaps   &kp ENTER
