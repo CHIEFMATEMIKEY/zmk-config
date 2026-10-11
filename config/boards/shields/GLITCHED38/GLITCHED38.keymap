@@ -30,12 +30,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp TAB>, <&kp Q>;
         };
-        td_sqt_boot: tapdance_single_quote_and_bootloader {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp sqt>, <&kp BOOTLOADER>;
-        };
         td_sbkt: tapdance_square_brackets {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -143,6 +137,13 @@
             tapping-term-ms = <200>; 
             bindings = <&mo>, <&kp>;
         };
+        mt_sqt_boot: mod_tap_single_quote_and_bootloader {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <500>;
+            bindings = <&kp sqt>, <&kp BOOTLOADER>;
+        };
     };
 
 
@@ -230,7 +231,7 @@
 //layer 0
         alpha_layer {
             bindings = <
-    &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp td_sqt_boot
+    &td_qtab       &kp W        &kp F        &kp P        &kp B                      &kp J        &kp L        &kp U        &kp Y        &kp mt_sqt_boot
     &kp A          &kp R        &kp S        &kp T        &kp G                      &kp M        &kp N        &kp E        &kp I        &kp O
     &hh LSHIFT Z   &hh LGUI X   &ht LALT C   &kp D        &kp V                      &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
                    &kp LALT     &kp LCTRL    &lt 2 BSPC   &mo 3                      &mo 1        &kp SPC      &td_shcaps   &kp ENTER
